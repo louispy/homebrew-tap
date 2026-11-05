@@ -15,9 +15,10 @@ cask "livewall" do
 
   caveats do
     <<~EOS
-      LiveWall is not notarized by Apple, so macOS may refuse to open it the first time.
-      Right-click LiveWall.app in /Applications and choose Open, or clear the quarantine flag:
+      LiveWall is not notarized by Apple, so macOS will block it the first time you open it.
+      Either run:
         xattr -d com.apple.quarantine /Applications/LiveWall.app
+      or open it once, then go to System Settings > Privacy & Security and click "Open Anyway".
     EOS
   end
 end
