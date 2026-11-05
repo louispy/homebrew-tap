@@ -7,7 +7,7 @@ cask "livewall" do
   desc "Loop a video behind the desktop icons as a live wallpaper"
   homepage "https://github.com/louispy/LiveWall"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "LiveWall.app"
 
