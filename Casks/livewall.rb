@@ -15,9 +15,9 @@ cask "livewall" do
 
   caveats do
     <<~EOS
-      LiveWall is not notarized by Apple. If macOS refuses to open it,
-      right-click LiveWall.app in /Applications and choose Open once, or install with:
-        brew install --cask --no-quarantine louispy/tap/livewall
+      LiveWall is not notarized by Apple, so macOS may refuse to open it the first time.
+      Right-click LiveWall.app in /Applications and choose Open, or clear the quarantine flag:
+        xattr -d com.apple.quarantine /Applications/LiveWall.app
     EOS
   end
 end
